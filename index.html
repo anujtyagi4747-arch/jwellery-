@@ -1130,5 +1130,956 @@ button{
     </div>
 
 </section>
+      <!-- ==========================================
+     PART 4 — NEW ARRIVALS
+========================================== -->
+
+<style>
+
+.new-arrivals{
+    width:100%;
+    padding:115px 5vw 125px;
+    background:#f7f3ee;
+    color:#171513;
+}
+
+.new-top{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    margin-bottom:55px;
+}
+
+.new-label{
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    opacity:.55;
+    margin-bottom:17px;
+}
+
+.new-title{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(44px,6vw,78px);
+    font-weight:400;
+    line-height:.94;
+    letter-spacing:-2px;
+}
+
+.new-note{
+    max-width:280px;
+    font-size:11px;
+    line-height:1.8;
+    opacity:.6;
+}
+
+
+/* ================================
+   FEATURED PRODUCT
+================================ */
+
+.featured-product{
+    display:grid;
+    grid-template-columns:1.35fr .65fr;
+    gap:14px;
+}
+
+.featured-image{
+    position:relative;
+    min-height:680px;
+    overflow:hidden;
+    background:
+        linear-gradient(
+            135deg,
+            #e9e1d8,
+            #d4c8bd
+        );
+}
+
+.featured-image-inner{
+    width:100%;
+    height:100%;
+    min-height:680px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:32px;
+    letter-spacing:5px;
+    color:rgba(23,21,19,.4);
+    transition:transform .8s ease;
+}
+
+.featured-image:hover .featured-image-inner{
+    transform:scale(1.025);
+}
+
+
+/* ================================
+   FEATURED INFO
+================================ */
+
+.featured-info{
+    min-height:680px;
+    padding:60px 45px;
+    background:#e8dfd6;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.featured-number{
+    font-size:9px;
+    letter-spacing:2px;
+    opacity:.5;
+}
+
+.featured-middle{
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+.featured-category{
+    font-size:9px;
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+    opacity:.5;
+    margin-bottom:18px;
+}
+
+.featured-name{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:42px;
+    font-weight:400;
+    line-height:1;
+    margin-bottom:20px;
+}
+
+.featured-description{
+    max-width:290px;
+    font-size:11px;
+    line-height:1.8;
+    opacity:.65;
+    margin-bottom:28px;
+}
+
+.featured-price{
+    font-size:12px;
+    letter-spacing:.5px;
+    margin-bottom:28px;
+}
+
+.shop-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    height:50px;
+    border:1px solid #171513;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.3s ease;
+}
+
+.shop-button:hover{
+    background:#171513;
+    color:#fff;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media(max-width:768px){
+
+    .new-arrivals{
+        padding:80px 20px 90px;
+    }
+
+    .new-top{
+        display:block;
+        margin-bottom:35px;
+    }
+
+    .new-label{
+        font-size:9px;
+        margin-bottom:13px;
+    }
+
+    .new-title{
+        font-size:48px;
+        letter-spacing:-1.5px;
+        margin-bottom:22px;
+    }
+
+    .new-note{
+        font-size:11px;
+        line-height:1.7;
+        max-width:310px;
+    }
+
+    .featured-product{
+        display:flex;
+        flex-direction:column;
+        gap:0;
+    }
+
+    .featured-image{
+        min-height:470px;
+    }
+
+    .featured-image-inner{
+        min-height:470px;
+        font-size:25px;
+        letter-spacing:4px;
+    }
+
+    .featured-info{
+        min-height:auto;
+        padding:42px 24px 30px;
+    }
+
+    .featured-number{
+        margin-bottom:50px;
+    }
+
+    .featured-middle{
+        margin:0;
+    }
+
+    .featured-category{
+        font-size:8px;
+        margin-bottom:14px;
+    }
+
+    .featured-name{
+        font-size:38px;
+        margin-bottom:18px;
+    }
+
+    .featured-description{
+        font-size:11px;
+        line-height:1.75;
+        margin-bottom:24px;
+    }
+
+    .featured-price{
+        font-size:11px;
+        margin-bottom:25px;
+    }
+
+    .shop-button{
+        height:48px;
+    }
+}
+
+
+/* ================================
+   SMALL PHONES
+================================ */
+
+@media(max-width:380px){
+
+    .new-arrivals{
+        padding-left:17px;
+        padding-right:17px;
+    }
+
+    .new-title{
+        font-size:43px;
+    }
+
+    .featured-image,
+    .featured-image-inner{
+        min-height:420px;
+    }
+
+    .featured-info{
+        padding:35px 20px 25px;
+    }
+
+    .featured-name{
+        font-size:34px;
+    }
+
+}
+
+</style>
+
+
+<section class="new-arrivals" id="new">
+
+    <div class="new-top">
+
+        <div>
+
+            <div class="new-label">
+                Just Arrived
+            </div>
+
+            <h2 class="new-title">
+                New<br>
+                Arrivals.
+            </h2>
+
+        </div>
+
+        <p class="new-note">
+            Discover the latest pieces from our
+            collection — designed for effortless
+            everyday elegance.
+        </p>
+
+    </div>
+
+
+    <div class="featured-product">
+
+
+        <!-- PRODUCT VISUAL -->
+
+        <div class="featured-image">
+
+            <!--
+            Replace this placeholder with your
+            actual jewellery product image later.
+            -->
+
+            <div class="featured-image-inner">
+                LUMÉRA
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT DETAILS -->
+
+        <div class="featured-info">
+
+            <div class="featured-number">
+                01 / NEW ARRIVAL
+            </div>
+
+
+            <div class="featured-middle">
+
+                <div class="featured-category">
+                    Necklace
+                </div>
+
+                <h3 class="featured-name">
+                    Aurelia<br>
+                    Necklace
+                </h3>
+
+                <p class="featured-description">
+                    A refined statement piece with
+                    a softly sculpted silhouette,
+                    created to elevate every look.
+                </p>
+
+                <div class="featured-price">
+                    ₹3,499
+                </div>
+
+                <a href="#shop" class="shop-button">
+                    Shop This Piece
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+      <!-- ==========================================
+     PART 5 — FULL SCREEN JEWELLERY VIDEO
+========================================== -->
+
+<style>
+
+.luxury-video{
+    position:relative;
+    width:100%;
+    height:88svh;
+    min-height:600px;
+    overflow:hidden;
+    background:#27231f;
+    color:#fff;
+}
+
+.luxury-video-bg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:1;
+}
+
+.luxury-video-overlay{
+    position:absolute;
+    inset:0;
+    z-index:2;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.12),
+            rgba(0,0,0,.42)
+        );
+}
+
+.luxury-video-content{
+    position:absolute;
+    left:50%;
+    bottom:9%;
+    transform:translateX(-50%);
+    width:90%;
+    max-width:700px;
+    text-align:center;
+    z-index:5;
+}
+
+.luxury-video-label{
+    font-size:9px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.luxury-video-title{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(44px,7vw,88px);
+    font-weight:400;
+    line-height:.95;
+    letter-spacing:-2px;
+    margin-bottom:22px;
+}
+
+.luxury-video-text{
+    max-width:420px;
+    margin:0 auto 28px;
+    font-size:12px;
+    line-height:1.75;
+    opacity:.85;
+}
+
+.luxury-video-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:165px;
+    height:47px;
+    padding:0 25px;
+    border:1px solid rgba(255,255,255,.8);
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.3s ease;
+}
+
+.luxury-video-button:hover{
+    background:#fff;
+    color:#171513;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .luxury-video{
+        height:78svh;
+        min-height:540px;
+    }
+
+    .luxury-video-bg{
+        object-position:center;
+    }
+
+    .luxury-video-content{
+        width:calc(100% - 40px);
+        bottom:55px;
+    }
+
+    .luxury-video-label{
+        font-size:8px;
+        letter-spacing:3px;
+        margin-bottom:15px;
+    }
+
+    .luxury-video-title{
+        font-size:48px;
+        letter-spacing:-1.5px;
+        margin-bottom:18px;
+    }
+
+    .luxury-video-text{
+        font-size:11px;
+        line-height:1.7;
+        max-width:310px;
+        margin-bottom:23px;
+    }
+
+    .luxury-video-button{
+        height:45px;
+        min-width:150px;
+        font-size:9px;
+    }
+
+}
+
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media(max-width:380px){
+
+    .luxury-video{
+        min-height:500px;
+    }
+
+    .luxury-video-content{
+        bottom:40px;
+    }
+
+    .luxury-video-title{
+        font-size:43px;
+    }
+
+}
+
+</style>
+
+
+<section class="luxury-video">
+
+    <!--
+        Replace this video with your jewellery
+        campaign / model / product video.
+
+        Example:
+        jewellery-campaign.mp4
+    -->
+
+    <video
+        class="luxury-video-bg"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata">
+
+        <source
+            src="jewellery-campaign.mp4"
+            type="video/mp4">
+
+    </video>
+
+
+    <div class="luxury-video-overlay"></div>
+
+
+    <div class="luxury-video-content">
+
+        <div class="luxury-video-label">
+            The Luméra Edit
+        </div>
+
+        <h2 class="luxury-video-title">
+            Jewellery<br>
+            in Motion.
+        </h2>
+
+        <p class="luxury-video-text">
+            Discover pieces created to catch the light,
+            move with you and become part of every moment.
+        </p>
+
+        <a
+            href="#collection"
+            class="luxury-video-button">
+
+            Explore Jewellery
+
+        </a>
+
+    </div>
+
+</section>
+      <!-- ==========================================
+     PART 6 — JEWELLERY CATEGORIES
+========================================== -->
+
+<style>
+
+.categories{
+    width:100%;
+    padding:115px 5vw 120px;
+    background:#ebe4dc;
+    color:#171513;
+}
+
+.categories-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:55px;
+}
+
+.categories-label{
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    opacity:.55;
+    margin-bottom:16px;
+}
+
+.categories-title{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(45px,6vw,78px);
+    font-weight:400;
+    line-height:.94;
+    letter-spacing:-2px;
+}
+
+.categories-note{
+    max-width:290px;
+    font-size:11px;
+    line-height:1.8;
+    opacity:.6;
+}
+
+
+/* ================================
+   CATEGORY GRID
+================================ */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+.category-card{
+    position:relative;
+    min-height:520px;
+    overflow:hidden;
+    background:#d7ccc0;
+}
+
+.category-bg{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:27px;
+    letter-spacing:3px;
+    color:rgba(23,21,19,.35);
+    background:
+        linear-gradient(
+            145deg,
+            #e9e1d8,
+            #cfc2b5
+        );
+    transition:transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.category-card:hover .category-bg{
+    transform:scale(1.045);
+}
+
+.category-shade{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 45%,
+            rgba(0,0,0,.48)
+        );
+}
+
+.category-content{
+    position:absolute;
+    left:24px;
+    right:24px;
+    bottom:24px;
+    z-index:3;
+    color:#fff;
+}
+
+.category-number{
+    font-size:8px;
+    letter-spacing:2px;
+    margin-bottom:10px;
+    opacity:.8;
+}
+
+.category-name{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:31px;
+    font-weight:400;
+    margin-bottom:13px;
+}
+
+.category-link{
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    border-bottom:1px solid rgba(255,255,255,.7);
+    padding-bottom:5px;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media(max-width:768px){
+
+    .categories{
+        padding:80px 20px 88px;
+    }
+
+    .categories-head{
+        display:block;
+        margin-bottom:35px;
+    }
+
+    .categories-label{
+        font-size:9px;
+        margin-bottom:13px;
+    }
+
+    .categories-title{
+        font-size:48px;
+        letter-spacing:-1.5px;
+        margin-bottom:22px;
+    }
+
+    .categories-note{
+        font-size:11px;
+        line-height:1.7;
+        max-width:310px;
+    }
+
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:9px;
+    }
+
+    .category-card{
+        min-height:390px;
+    }
+
+    .category-content{
+        left:16px;
+        right:16px;
+        bottom:18px;
+    }
+
+    .category-number{
+        font-size:7px;
+        margin-bottom:7px;
+    }
+
+    .category-name{
+        font-size:24px;
+        margin-bottom:9px;
+    }
+
+    .category-link{
+        font-size:7px;
+        letter-spacing:1.5px;
+    }
+
+}
+
+
+/* ================================
+   SMALL PHONES
+================================ */
+
+@media(max-width:380px){
+
+    .categories{
+        padding-left:16px;
+        padding-right:16px;
+    }
+
+    .categories-title{
+        font-size:43px;
+    }
+
+    .category-card{
+        min-height:350px;
+    }
+
+    .category-name{
+        font-size:21px;
+    }
+
+}
+
+</style>
+
+
+<section class="categories" id="shop">
+
+    <div class="categories-head">
+
+        <div>
+
+            <div class="categories-label">
+                Shop by Category
+            </div>
+
+            <h2 class="categories-title">
+                Find Your<br>
+                Signature.
+            </h2>
+
+        </div>
+
+        <p class="categories-note">
+            From subtle everyday pieces to
+            statement silhouettes, discover
+            jewellery that feels like you.
+        </p>
+
+    </div>
+
+
+    <div class="category-grid">
+
+
+        <!-- RINGS -->
+
+        <a href="#collection" class="category-card">
+
+            <div class="category-bg">
+                RINGS
+            </div>
+
+            <div class="category-shade"></div>
+
+            <div class="category-content">
+
+                <div class="category-number">
+                    01
+                </div>
+
+                <div class="category-name">
+                    Rings
+                </div>
+
+                <div class="category-link">
+                    Explore
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- EARRINGS -->
+
+        <a href="#collection" class="category-card">
+
+            <div class="category-bg">
+                EARRINGS
+            </div>
+
+            <div class="category-shade"></div>
+
+            <div class="category-content">
+
+                <div class="category-number">
+                    02
+                </div>
+
+                <div class="category-name">
+                    Earrings
+                </div>
+
+                <div class="category-link">
+                    Explore
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- NECKLACES -->
+
+        <a href="#collection" class="category-card">
+
+            <div class="category-bg">
+                NECKLACES
+            </div>
+
+            <div class="category-shade"></div>
+
+            <div class="category-content">
+
+                <div class="category-number">
+                    03
+                </div>
+
+                <div class="category-name">
+                    Necklaces
+                </div>
+
+                <div class="category-link">
+                    Explore
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- BRACELETS -->
+
+        <a href="#collection" class="category-card">
+
+            <div class="category-bg">
+                BRACELETS
+            </div>
+
+            <div class="category-shade"></div>
+
+            <div class="category-content">
+
+                <div class="category-number">
+                    04
+                </div>
+
+                <div class="category-name">
+                    Bracelets
+                </div>
+
+                <div class="category-link">
+                    Explore
+                </div>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+</section>
 </body>
 </html>
