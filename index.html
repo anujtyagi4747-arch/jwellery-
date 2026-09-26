@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#f7f3ee">
+
+<title>LUMÉRA — Fine Jewellery</title>
+
+<style>
+
+/* ================================
+   BASIC RESET
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    width:100%;
+    min-height:100vh;
+    background:#f7f3ee;
+    color:#171513;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font-family:inherit;
+}
+
+/* ================================
+   MAIN WEBSITE
+================================ */
+
+.site{
+    width:100%;
+    overflow:hidden;
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100svh;
+    min-height:650px;
+    overflow:hidden;
+    background:#d9d1c7;
+}
+
+/* Hero video */
+
+.hero-video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    z-index:1;
+}
+
+/* Dark / luxury overlay */
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    z-index:2;
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,.28) 0%,
+        rgba(0,0,0,.04) 38%,
+        rgba(0,0,0,.28) 100%
+    );
+}
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.navbar{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:82px;
+    padding:0 5vw;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    z-index:10;
+    color:#fff;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:500;
+    letter-spacing:6px;
+    text-transform:uppercase;
+    white-space:nowrap;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:34px;
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.nav-links a{
+    position:relative;
+    padding:8px 0;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:2px;
+    width:0;
+    height:1px;
+    background:#fff;
+    transition:.3s ease;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+/* Icons */
+
+.nav-icons{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.nav-icon{
+    width:20px;
+    height:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
+
+.nav-icon svg{
+    width:19px;
+    height:19px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.5;
+}
+
+/* ================================
+   HERO CONTENT
+================================ */
+
+.hero-content{
+    position:absolute;
+    left:6vw;
+    bottom:9vh;
+    z-index:5;
+    color:#fff;
+    max-width:650px;
+}
+
+.hero-small{
+    font-size:11px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.hero-title{
+    font-family:Georgia, "Times New Roman", serif;
+    font-size:clamp(48px,7vw,105px);
+    line-height:.9;
+    font-weight:400;
+    letter-spacing:-3px;
+    margin-bottom:28px;
+}
+
+.hero-description{
+    max-width:410px;
+    font-size:13px;
+    line-height:1.7;
+    letter-spacing:.4px;
+    margin-bottom:28px;
+}
+
+.hero-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:165px;
+    height:48px;
+    padding:0 25px;
+    background:#fff;
+    color:#171513;
+    border:1px solid #fff;
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.3s ease;
+}
+
+.hero-button:hover{
+    background:transparent;
+    color:#fff;
+}
+
+/* ================================
+   SCROLL INDICATOR
+================================ */
+
+.scroll-indicator{
+    position:absolute;
+    right:5vw;
+    bottom:6vh;
+    z-index:5;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+}
+
+.scroll-indicator span{
+    writing-mode:vertical-rl;
+    font-size:9px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.scroll-line{
+    width:1px;
+    height:55px;
+    background:rgba(255,255,255,.7);
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media(max-width:768px){
+
+    .hero{
+        height:100svh;
+        min-height:600px;
+    }
+
+    .navbar{
+        height:70px;
+        padding:0 20px;
+    }
+
+    .logo{
+        font-size:19px;
+        letter-spacing:4px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .nav-icons{
+        gap:14px;
+    }
+
+    .hero-video{
+        object-position:center center;
+    }
+
+    .hero-content{
+        left:22px;
+        right:22px;
+        bottom:70px;
+        max-width:none;
+    }
+
+    .hero-small{
+        font-size:9px;
+        letter-spacing:3px;
+        margin-bottom:14px;
+    }
+
+    .hero-title{
+        font-size:clamp(48px,15vw,72px);
+        letter-spacing:-2px;
+        margin-bottom:20px;
+        line-height:.92;
+    }
+
+    .hero-description{
+        max-width:330px;
+        font-size:12px;
+        line-height:1.65;
+        margin-bottom:22px;
+    }
+
+    .hero-button{
+        height:46px;
+        min-width:150px;
+        font-size:10px;
+    }
+
+    .scroll-indicator{
+        right:20px;
+        bottom:35px;
+    }
+
+    .scroll-indicator span{
+        font-size:8px;
+    }
+
+    .scroll-line{
+        height:38px;
+    }
+}
+
+/* ================================
+   SMALL PHONES
+================================ */
+
+@media(max-width:380px){
+
+    .hero-content{
+        bottom:55px;
+    }
+
+    .hero-title{
+        font-size:46px;
+    }
+
+    .hero-description{
+        font-size:11px;
+    }
+
+    .scroll-indicator{
+        display:none;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="site">
+
+<!-- HERO START -->
+<section class="hero" id="home">
+
+    <!--
+      VIDEO:
+      Later replace "jewellery-video.mp4"
+      with your actual jewellery video.
+    -->
+
+    <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="jewellery-poster.jpg">
+
+        <source
+            src="jewellery-video.mp4"
+            type="video/mp4">
+
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+
+        <a href="#home" class="logo">
+            LUMÉRA
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="#collection">
+                Collection
+            </a>
+
+            <a href="#new">
+                New In
+            </a>
+
+            <a href="#story">
+                Our Story
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </nav>
+
+        <div class="nav-icons">
+
+            <div class="nav-icon" aria-label="Search">
+
+                <svg viewBox="0 0 24 24">
+                    <circle cx="10.8" cy="10.8" r="6.8"></circle>
+                    <path d="M16 16l5 5"></path>
+                </svg>
+
+            </div>
+
+            <div class="nav-icon" aria-label="Shopping bag">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M5 8h14l1 13H4L5 8z"></path>
+                    <path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
+                </svg>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- HERO CONTENT -->
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            Fine Jewellery · Made to Last
+        </div>
+
+        <h1 class="hero-title">
+            Wear<br>
+            Your Story.
+        </h1>
+
+        <p class="hero-description">
+            Timeless jewellery designed to become
+            part of your most beautiful moments.
+        </p>
+
+        <a href="#collection" class="hero-button">
+            Explore Collection
+        </a>
+
+    </div>
+
+    <!-- SCROLL -->
+
+    <div class="scroll-indicator">
+
+        <span>Scroll</span>
+
+        <div class="scroll-line"></div>
+
+    </div>
+
+</section>
+<!-- HERO END -->
+
+</div>
+<!-- ==========================================
+     PART 2 — COLLECTION SECTION
+========================================== -->
+
+<style>
+
+/* COLLECTION */
+
+.collection{
+    width:100%;
+    padding:110px 5vw 120px;
+    background:#f7f3ee;
+    color:#171513;
+}
+
+.collection-top{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:30px;
+    margin-bottom:55px;
+}
+
+.collection-label{
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:16px;
+    opacity:.65;
+}
+
+.collection-title{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(42px,6vw,78px);
+    font-weight:400;
+    line-height:.95;
+    letter-spacing:-2px;
+}
+
+.collection-intro{
+    max-width:330px;
+    font-size:12px;
+    line-height:1.8;
+    opacity:.65;
+}
+
+/* PRODUCTS GRID */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+
+.product-card{
+    position:relative;
+    overflow:hidden;
+    background:#e9e1d8;
+}
+
+.product-image{
+    width:100%;
+    aspect-ratio:3/4;
+    object-fit:cover;
+    display:block;
+    transition:transform .7s cubic-bezier(.2,.7,.2,1);
+}
+
+.product-card:hover .product-image{
+    transform:scale(1.045);
+}
+
+.product-info{
+    padding:18px 4px 10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:12px;
+}
+
+.product-name{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:17px;
+    font-weight:400;
+}
+
+.product-type{
+    font-size:9px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    opacity:.55;
+    margin-top:6px;
+}
+
+.product-price{
+    font-size:11px;
+    white-space:nowrap;
+    letter-spacing:.5px;
+}
+
+/* IMAGE PLACEHOLDER */
+
+.product-placeholder{
+    width:100%;
+    aspect-ratio:3/4;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+        linear-gradient(
+            145deg,
+            #eee7df,
+            #d9cec2
+        );
+    color:rgba(23,21,19,.45);
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:22px;
+}
+
+/* VIEW ALL */
+
+.collection-bottom{
+    margin-top:55px;
+    text-align:center;
+}
+
+.view-all{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:180px;
+    height:48px;
+    border:1px solid #171513;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.3s ease;
+}
+
+.view-all:hover{
+    background:#171513;
+    color:#fff;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .collection{
+        padding:78px 20px 85px;
+    }
+
+    .collection-top{
+        display:block;
+        margin-bottom:35px;
+    }
+
+    .collection-label{
+        font-size:9px;
+        margin-bottom:13px;
+    }
+
+    .collection-title{
+        font-size:47px;
+        letter-spacing:-1.5px;
+        margin-bottom:22px;
+    }
+
+    .collection-intro{
+        font-size:11px;
+        line-height:1.7;
+        max-width:310px;
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:22px 10px;
+    }
+
+    .product-info{
+        padding:12px 2px 5px;
+        display:block;
+    }
+
+    .product-name{
+        font-size:15px;
+    }
+
+    .product-type{
+        font-size:8px;
+        margin-top:5px;
+    }
+
+    .product-price{
+        font-size:10px;
+        margin-top:8px;
+    }
+
+    .collection-bottom{
+        margin-top:42px;
+    }
+
+    .view-all{
+        width:100%;
+        height:46px;
+    }
+}
+
+/* VERY SMALL PHONES */
+
+@media(max-width:360px){
+
+    .collection{
+        padding-left:16px;
+        padding-right:16px;
+    }
+
+    .collection-title{
+        font-size:42px;
+    }
+
+    .product-grid{
+        gap:18px 8px;
+    }
+
+    .product-name{
+        font-size:14px;
+    }
+}
+
+</style>
+
+
+<!-- COLLECTION HTML -->
+
+<section class="collection" id="collection">
+
+    <div class="collection-top">
+
+        <div>
+
+            <div class="collection-label">
+                Discover the Collection
+            </div>
+
+            <h2 class="collection-title">
+                Pieces<br>
+                with Presence.
+            </h2>
+
+        </div>
+
+        <p class="collection-intro">
+            Sculptural silhouettes, delicate details and
+            timeless forms — jewellery designed to be
+            worn today and treasured forever.
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <!-- PRODUCT 01 -->
+
+        <article class="product-card">
+
+            <div class="product-placeholder">
+                LUMÉRA
+            </div>
+
+            <div class="product-info">
+
+                <div>
+
+                    <div class="product-name">
+                        Signature Ring
+                    </div>
+
+                    <div class="product-type">
+                        Rings
+                    </div>
+
+                </div>
+
+                <div class="product-price">
+                    ₹2,499
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 02 -->
+
+        <article class="product-card">
+
+            <div class="product-placeholder">
+                LUMÉRA
+            </div>
+
+            <div class="product-info">
+
+                <div>
+
+                    <div class="product-name">
+                        Pearl Drop
+                    </div>
+
+                    <div class="product-type">
+                        Earrings
+                    </div>
+
+                </div>
+
+                <div class="product-price">
+                    ₹1,899
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 03 -->
+
+        <article class="product-card">
+
+            <div class="product-placeholder">
+                LUMÉRA
+            </div>
+
+            <div class="product-info">
+
+                <div>
+
+                    <div class="product-name">
+                        Sculpted Chain
+                    </div>
+
+                    <div class="product-type">
+                        Necklaces
+                    </div>
+
+                </div>
+
+                <div class="product-price">
+                    ₹3,299
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 04 -->
+
+        <article class="product-card">
+
+            <div class="product-placeholder">
+                LUMÉRA
+            </div>
+
+            <div class="product-info">
+
+                <div>
+
+                    <div class="product-name">
+                        Classic Cuff
+                    </div>
+
+                    <div class="product-type">
+                        Bracelets
+                    </div>
+
+                </div>
+
+                <div class="product-price">
+                    ₹2,199
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+    <div class="collection-bottom">
+
+        <a href="#shop" class="view-all">
+            View All Jewellery
+        </a>
+
+    </div>
+
+</section>
+  <!-- ==========================================
+     PART 3 — EDITORIAL JEWELLERY SECTION
+========================================== -->
+
+<style>
+
+.editorial{
+    width:100%;
+    background:#ebe4dc;
+    color:#171513;
+    padding:0;
+}
+
+.editorial-wrap{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    min-height:720px;
+}
+
+/* IMAGE SIDE */
+
+.editorial-media{
+    position:relative;
+    min-height:720px;
+    overflow:hidden;
+    background:#d8cec4;
+}
+
+.editorial-media img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform 1s cubic-bezier(.2,.7,.2,1);
+}
+
+.editorial-media:hover img{
+    transform:scale(1.025);
+}
+
+/* IMAGE FALLBACK */
+
+.editorial-fallback{
+    width:100%;
+    height:100%;
+    min-height:720px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+        linear-gradient(
+            135deg,
+            #d8cec4,
+            #eee7df
+        );
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:30px;
+    letter-spacing:4px;
+}
+
+/* TEXT SIDE */
+
+.editorial-content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:80px 9vw;
+}
+
+.editorial-label{
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    opacity:.55;
+    margin-bottom:22px;
+}
+
+.editorial-title{
+    font-family:Georgia,"Times New Roman",serif;
+    font-weight:400;
+    font-size:clamp(42px,5vw,72px);
+    line-height:.96;
+    letter-spacing:-2px;
+    margin-bottom:30px;
+}
+
+.editorial-text{
+    max-width:390px;
+    font-size:12px;
+    line-height:1.9;
+    opacity:.68;
+    margin-bottom:35px;
+}
+
+.editorial-link{
+    display:inline-flex;
+    width:max-content;
+    align-items:center;
+    gap:18px;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    padding-bottom:9px;
+    border-bottom:1px solid #171513;
+}
+
+.editorial-arrow{
+    font-size:17px;
+    line-height:0;
+    transition:transform .3s ease;
+}
+
+.editorial-link:hover .editorial-arrow{
+    transform:translateX(7px);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .editorial-wrap{
+        display:flex;
+        flex-direction:column;
+    }
+
+    .editorial-media{
+        min-height:540px;
+        height:72vh;
+    }
+
+    .editorial-fallback{
+        min-height:540px;
+    }
+
+    .editorial-content{
+        padding:72px 22px 78px;
+    }
+
+    .editorial-label{
+        font-size:9px;
+        margin-bottom:17px;
+    }
+
+    .editorial-title{
+        font-size:48px;
+        letter-spacing:-1.5px;
+        margin-bottom:23px;
+    }
+
+    .editorial-text{
+        font-size:11px;
+        line-height:1.8;
+        max-width:330px;
+        margin-bottom:29px;
+    }
+
+}
+
+/* SMALL PHONES */
+
+@media(max-width:380px){
+
+    .editorial-media{
+        min-height:470px;
+    }
+
+    .editorial-fallback{
+        min-height:470px;
+        font-size:24px;
+    }
+
+    .editorial-content{
+        padding:60px 18px 65px;
+    }
+
+    .editorial-title{
+        font-size:43px;
+    }
+
+}
+
+</style>
+
+
+<section class="editorial" id="story">
+
+    <div class="editorial-wrap">
+
+
+        <!-- LEFT IMAGE -->
+
+        <div class="editorial-media">
+
+            <!--
+            Replace this image later with your
+            jewellery lifestyle/model image.
+
+            Example:
+            src="jewellery-model.jpg"
+            -->
+
+            <div class="editorial-fallback">
+                LUMÉRA
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT CONTENT -->
+
+        <div class="editorial-content">
+
+            <div class="editorial-label">
+                The Art of Jewellery
+            </div>
+
+            <h2 class="editorial-title">
+                Made for<br>
+                your moments.
+            </h2>
+
+            <p class="editorial-text">
+                Jewellery should feel personal. Every Luméra
+                piece is designed with a balance of modern
+                form, subtle detail and timeless elegance —
+                created to become part of your story.
+            </p>
+
+            <a href="#about" class="editorial-link">
+
+                Discover Our Story
+
+                <span class="editorial-arrow">
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+</body>
+</html>
